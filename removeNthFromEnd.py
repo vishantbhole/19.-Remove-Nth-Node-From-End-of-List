@@ -44,5 +44,10 @@ def test():
     result = sol.removeNthFromEnd(head, 1)
     print("After removing 1st from end: ", result)
 
+    head = build_linked_list([1, 2])
+    print("Original: ", head)
+    result = sol.removeNthFromEnd(head, 1)
+    print("After removing 1st from end: ", result)
+
 if __name__ == "__main__":
     test()
