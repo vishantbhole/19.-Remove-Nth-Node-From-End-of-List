@@ -30,3 +30,13 @@ class Solution(object):
             end = end.next
         curr.next = curr.next.next
         return dummy.next
+
+
+# Helper function to build linked list from list
+def build_linked_list(values):
+    dummy = ListNode(0)
+    current = dummy
+    for val in values:
+        current.next = ListNode(val)
+        current = current.next
+    return dummy.next
