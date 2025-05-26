@@ -31,7 +31,6 @@ class Solution(object):
         curr.next = curr.next.next
         return dummy.next
 
-
 # Helper function to build linked list from list
 def build_linked_list(values):
     dummy = ListNode(0)
@@ -40,3 +39,25 @@ def build_linked_list(values):
         current.next = ListNode(val)
         current = current.next
     return dummy.next
+# Test case examples
+def test():
+    sol = Solution()
+
+    head = build_linked_list([1, 2, 3, 4, 5])
+    print("Original: ", head)
+    result = sol.removeNthFromEnd(head, 2)
+    print("After removing 2nd from end: ", result)
+
+    head = build_linked_list([1])
+    print("Original: ", head)
+    result = sol.removeNthFromEnd(head, 1)
+    print("After removing 1st from end: ", result)
+
+    head = build_linked_list([1, 2])
+    print("Original: ", head)
+    result = sol.removeNthFromEnd(head, 1)
+    print("After removing 1st from end: ", result)
+
+if __name__ == "__main__":
+    test()
+
