@@ -15,8 +15,6 @@ class ListNode(object):
             current = current.next
         return "->".join(result)
 
-    
-
 class Solution(object):
     def removeNthFromEnd(self, head, n):
         dummy = ListNode(0, head)
@@ -60,4 +58,3 @@ def test():
 
 if __name__ == "__main__":
     test()
-
